@@ -121,7 +121,7 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>${tcnative.artifactId}</artifactId>
-      <classifier>${tcnative.classifier}</classifier>
+      <!--<classifier>${tcnative.classifier}</classifier>-->
     </dependency>
     <dependency>
       <groupId>${conscrypt.groupId}</groupId>
@@ -177,25 +177,6 @@
   </dependencies>
 
   <build>
-    <plugins>
-      <!-- run-example.sh invokes this plugin to launch an example. -->
-      <plugin>
-        <groupId>kr.motd.maven</groupId>
-        <artifactId>exec-maven-plugin</artifactId>
-        <configuration>
-          <executable>${java.home}/bin/java</executable>
-          <commandlineArgs>
-            ${argLine.common}
-            ${argLine.alpnAgent}
-            -classpath %classpath
-            ${argLine.leak}
-            ${argLine.coverage}
-            ${argLine.example}
-            ${exampleClass}
-          </commandlineArgs>
-        </configuration>
-      </plugin>
-    </plugins>
   </build>
 </project>
 

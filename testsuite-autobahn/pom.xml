@@ -69,37 +69,37 @@
     </profile>
   </profiles>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>me.normanmaurer.maven.autobahntestsuite</groupId>
-        <artifactId>autobahntestsuite-maven-plugin</artifactId>
-        <version>0.1.5</version>
-        <configuration>
-          <mainClass>io.netty.testsuite.autobahn.AutobahnServer</mainClass>
-          <cases>
-            <case>*</case>
-          </cases>
-          <excludeCases />
-          <failOnNonStrict>false</failOnNonStrict>
-          <skip>${skipAutobahnTestsuite}</skip>
-        </configuration>
-        <executions>
-          <execution>
-            <phase>test</phase>
-            <goals>
-              <goal>fuzzingclient</goal>
-            </goals>
-          </execution>
-        </executions>
-        <dependencies>
-          <dependency>
-            <groupId>org.python</groupId>
-            <artifactId>jython-standalone</artifactId>
-            <version>2.7.1</version>
-          </dependency>
-        </dependencies>
-      </plugin>
-    </plugins>
-  </build>
+  <!--<build>-->
+    <!--<plugins>-->
+      <!--<plugin>-->
+        <!--<groupId>me.normanmaurer.maven.autobahntestsuite</groupId>-->
+        <!--<artifactId>autobahntestsuite-maven-plugin</artifactId>-->
+        <!--<version>0.1.5</version>-->
+        <!--<configuration>-->
+          <!--<mainClass>io.netty.testsuite.autobahn.AutobahnServer</mainClass>-->
+          <!--<cases>-->
+            <!--<case>*</case>-->
+          <!--</cases>-->
+          <!--<excludeCases />-->
+          <!--<failOnNonStrict>false</failOnNonStrict>-->
+          <!--<skip>${skipAutobahnTestsuite}</skip>-->
+        <!--</configuration>-->
+        <!--<executions>-->
+          <!--<execution>-->
+            <!--<phase>test</phase>-->
+            <!--<goals>-->
+              <!--<goal>fuzzingclient</goal>-->
+            <!--</goals>-->
+          <!--</execution>-->
+        <!--</executions>-->
+        <!--<dependencies>-->
+          <!--<dependency>-->
+            <!--<groupId>org.python</groupId>-->
+            <!--<artifactId>jython-standalone</artifactId>-->
+            <!--<version>2.7.1</version>-->
+          <!--</dependency>-->
+        <!--</dependencies>-->
+      <!--</plugin>-->
+    <!--</plugins>-->
+  <!--</build>-->
 </project>
